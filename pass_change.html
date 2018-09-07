@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>パスワード変更</title>
+    <link rel="stylesheet" href="forms.css">
+  </head>
+
+  <body>
+    <script>
+      function passcheck() {
+        var box = document.getElementById('newpass2');
+
+        var pass1 = document.forms.mainform.newpass1.value;
+        var pass2 = document.forms.mainform.newpass2.value;
+        if (pass1 != pass2) {
+          box.style.border = "1px #f00 solid";
+        } else {
+          box.style.border = "1px #000 solid";
+          document.forms.mainform.submit();
+        }
+      }
+    </script>
+    <div id="form-wrap">
+      <h1>パスワード変更</h1>
+      <div id="form-main">
+        <form action="pass_change.php" method="post" id="mainform">
+          名前 :<input type="text" name="name">
+          古いパスワード :<input type="password" name="oldpass">
+          新しいパスワード :<input type="password" name="newpass" id="newpass1">
+          新しいパスワード（再入力） :<input type="password" name="newpassc" id="newpass2">
+          <br><input type="button" onclick="passcheck()" value="変更">
+        </form>
+      </div>
+    </div>
+  </body>
+
+</html>

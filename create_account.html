@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>アカウント作成</title>
+    <link rel="stylesheet" href="forms.css">
+  </head>
+
+  <body>
+    <script>
+      function passcheck() {
+        var box = document.getElementById('cpass2');
+
+        var pass1 = document.forms.mainform.cpass1.value;
+        var pass2 = document.forms.mainform.cpass2.value;
+        if (pass1 != pass2) {
+          box.style.border = "1px #f00 solid";
+        } else {
+          box.style.border = "1px #000 solid";
+          document.forms.mainform.submit();
+        }
+      }
+    </script>
+    <div id="form-wrap">
+      <h1>アカウント作成</h1>
+      <div id="form-main">
+        <form action="create_account.php" method="post" id="mainform">
+          名前: <input type="text" name="c_name">
+          パスワード: <input type="password" name="c_pass" id="cpass1">
+          パスワードの再確認:<input type="password" name="cc_pass" id="cpass2">
+        </form>
+        <br><input type="button" onclick="passcheck()" value="作成">
+      </div>
+    </div>
+  </body>
+</html>

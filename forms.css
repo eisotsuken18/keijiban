@@ -1,0 +1,35 @@
+body {
+  background-color: #24333c;
+  color: #fff;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 0;
+  border-radius: 4px 4px 0 0;
+  border: 1px #fff solid;
+  padding: 10px 20px;
+  border-bottom: none;
+  background-color: #fff;
+  color: #24333c
+}
+input {
+  border: 1px #fff solid;
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #24333c;
+  border-radius: 4px;
+  color: #fff;
+}
+#form-wrap {
+  width: 360px;
+  margin: 200px auto 0 auto;
+}
+#form-main {
+  padding: 20px;
+  border-radius: 0 0 4px 4px;
+  border: 1px #fff solid;
+}
